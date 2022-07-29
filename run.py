@@ -142,7 +142,17 @@ def liters():
     print('You have choosen the liters option')
     print('What do you wish to convert? 1.Liters or 2.Gallons?')
     option = input('enter you option(1 or 2): ')
-    print(option)
+    if option == '1':
+        print('Liters it is...')
+        option_value = input('\nHow many liters: ')
+        print(option_value)
+    elif option == '2':
+        print('Gallons it is...')
+        option_value = input('\nHow many gallons: ')
+        print(option_value)
+    else:
+        validate_opt(option)
+        degrees()
 
 
 
