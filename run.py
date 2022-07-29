@@ -1,3 +1,7 @@
+import colorama
+from colorama import Fore, Style
+colorama.init(autoreset=True)
+
 def retry_message():
     """
     Prints a retry message.
@@ -17,7 +21,7 @@ def degrees():
         print("\nFahrenheit it is...")
         option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             degrees()
         else:
             cel_value = round((int(option_value) - 32) * 5 / 9, 2)
@@ -32,7 +36,7 @@ def degrees():
         print("\nCelcius it is...")
         option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             degrees()
         else:
             fahr_value = round((int(option_value) * 1.8) + 32, 2)
@@ -60,7 +64,7 @@ def meters():
         print("\nFeet it is...")
         option_value = input("How many feet: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             meters()
         else:
             meter_value = round(float(option_value) / 3.2808399, 2)
@@ -75,7 +79,7 @@ def meters():
         print("\nmeters it is...")
         option_value = input("How many meters: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             meters()
         else:
             feet_value = round(float(option_value) * 3.2808399, 2)
@@ -102,7 +106,7 @@ def kilos():
         print("\nKilos it is...")
         option_value = input("How many kilos: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             kilos()
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
@@ -117,7 +121,7 @@ def kilos():
         print("\nPounds it is...")
         option_value = input("How many pounds: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             kilos()
         else:
             kilos_value = round(float(option_value) / 2.20462262, 2)
@@ -145,7 +149,7 @@ def liters():
         print("\nLiters it is...")
         option_value = input("How many liters: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             liters()
         else:
             gallons_value = round(int(option_value) / 3.78541178, 2)
@@ -160,7 +164,7 @@ def liters():
         print("\nGallons it is...")
         option_value = input("How many gallons: ")
         if not option_value.isdigit():
-            print("invalid input, try again")
+            print(f'{Fore.RED}invalid input, try again')
             liters()
         else:
             liters_value = round(int(option_value) * 3.78541178, 2)
@@ -180,7 +184,8 @@ def welcome():
     """
     Print welcome message
     """
-    message = """\nwelcome to the unit converter!\n
+    message = """\n
+        welcome to the unit converter!\n
         Units you can convert:\n
         1 = celcius/fahrenheit\n
         2 = meters/feet\n
@@ -189,7 +194,7 @@ def welcome():
         5 = exit the program
         make your choice my entering one of the above(1-4) options.
         """
-    print(message)
+    print(f'{Fore.BLUE} + {message}')
     while True:
         choice = input()
         if validate(choice):
@@ -216,9 +221,9 @@ def validate(values):
     """
     try:
         if values not in ("1", "2", "3", "4", "5"):
-            raise ValueError(f"1,2,3,4 are valid values, you typed {values}")
+            raise ValueError(f"1,2,3,4,5 are valid values, you typed {values}")
     except ValueError as e:
-        print(f"Invalid input: {e}, try again.\n")
+        print(f'{Fore.RED}Invalid input: {e}, try again.\n')
         return False
     return True
 
@@ -231,7 +236,7 @@ def validate_opt(values):
         if values not in ("1", "2"):
             raise ValueError(f"1,2 are valid values, you typed {values}")
     except ValueError as e:
-        print(f"Invalid input: {e}, try again.\n")
+        print(f"{Fore.RED}Invalid input: {e}, try again.\n")
         return False
     return True
 
