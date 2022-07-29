@@ -7,7 +7,6 @@ def retry_message():
     print('(Y)es or (N)o?')   
 
 
-
 def degrees():
     """
     Function to convert celcius to fahrenheit and vice versa.
@@ -28,7 +27,8 @@ def degrees():
             retry_answer = input()
             if retry_answer == 'y':
                 degrees()
-            else: welcome()
+            else:
+                welcome()
     elif option == '2':
         print('Celcius it is...')
         option_value = input('\nWrite down a temperature: ')
@@ -42,12 +42,20 @@ def degrees():
             retry_answer = input()
             if retry_answer == 'y':
                 degrees()
-            else: welcome()
+            else: 
+                welcome()
 
     else:
         validate_opt(option)
         degrees()
 
+
+def meters():
+    """
+    This function will convert meters to feet and vice versa.
+    """
+    print('You have choosen the meters option')
+    print('What do you wish to convert? 1.Feet or 2.Meters?')
     
 
 
@@ -78,10 +86,6 @@ def welcome():
         else:
             welcome()
         return True
-        
-
-        
-
 
 
 def validate(values):
