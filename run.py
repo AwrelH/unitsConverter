@@ -145,11 +145,33 @@ def liters():
     if option == '1':
         print('Liters it is...')
         option_value = input('\nHow many liters: ')
-        print(option_value)
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            liters()
+        else:
+            gallons_value = round(int(option_value) / 3.78541178, 2)
+            print(f'\t{option_value} liter(s) equals {gallons_value} gallon(s)')
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                degrees()
+            else:
+                welcome()     
     elif option == '2':
         print('Gallons it is...')
         option_value = input('\nHow many gallons: ')
-        print(option_value)
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            liters()
+        else:
+            liters_value = round(int(option_value) * 3.78541178, 2)
+            print(f'\t{option_value} gallon(s) equals {liters_value} liter(s)')
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                degrees()
+            else:
+                welcome()     
     else:
         validate_opt(option)
         degrees()
