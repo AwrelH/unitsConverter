@@ -98,7 +98,7 @@ def kilos():
     """
     print('You have choosen the kilos option')
     print('What do you wish to convert? 1.Kilos or 2.Pounds?')
-    option = input('enter you option: ')
+    option = input('enter you option(1 or 2): ')
     if option == '1':
         print('Kilos it is...')
         option_value = input('\nHow many kilos: ')
@@ -135,6 +135,15 @@ def kilos():
         kilos()
 
 
+def liters():
+    """
+    This function will convert liters to gallons and vice versa.
+    """
+    print('You have choosen the liters option')
+    print('What do you wish to convert? 1.Liters or 2.Gallons?')
+    option = input('enter you option(1 or 2): ')
+    print(option)
+
 
 
 def welcome():
@@ -161,7 +170,7 @@ def welcome():
             elif choice == '3':
                 kilos()
             elif choice == '4':
-                print('4 = liters/us gallons\n')
+                liters()
             elif choice == '5':
                 print('Thank you for testing the program!')
                 return
