@@ -101,7 +101,15 @@ def kilos():
     option = input('enter you option: ')
     if option == '1':
         print('Kilos it is...')
-        input('\nHow many kilos: ')
+        option_value = input('\nHow many kilos: ')
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            kilos()
+        else:
+            pounds_value = round(float(option_value) * 2.20462262, 2)
+            print(f'{option_value} kilo(s) equals {pounds_value} pound(s)')
+
+
     elif option == '2':
         print('Pounds it is...')
         input('\nHow many pounds: ')
