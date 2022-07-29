@@ -1,48 +1,47 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 def retry_message():
-    print('\nWish to test out some other values?')
-    print('(Y)es or (N)o?')   
+    """
+    Prints a retry message.
+    """
+    print("\nWish to test out some other values? Yes or No")
+    print("y/n?")
 
 
 def degrees():
     """
     Function to convert celcius to fahrenheit and vice versa.
     """
-    print('You have choosen the degrees option')
-    print('What do you wish to convert? 1.Fahrenheit or 2.Celcius?')
-    option = input('enter you option(1 or 2): ')
-    if option == '1':
-        print('\nFahrenheit it is...')
-        option_value = input('Write down a temperature: ')
+    print("You have choosen the degrees option")
+    print("What do you wish to convert? 1.Fahrenheit or 2.Celcius?")
+    option = input("enter you option(1 or 2): ")
+    if option == "1":
+        print("\nFahrenheit it is...")
+        option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             degrees()
         else:
-            cel_value = round((int(option_value)-32) * 5 / 9, 2)
-            print(f'\t{option_value} F equals {cel_value} deg. Celcius')
+            cel_value = round((int(option_value) - 32) * 5 / 9, 2)
+            print(f"\t{option_value} F equals {cel_value} deg. Celcius")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 degrees()
             else:
                 welcome()
-    elif option == '2':
-        print('\nCelcius it is...')
-        option_value = input('Write down a temperature: ')
+    elif option == "2":
+        print("\nCelcius it is...")
+        option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             degrees()
         else:
-            fahr_value = round((int(option_value)*1.8) + 32, 2)
-            print(f'\t{option_value} C equals {fahr_value} deg. Fahrenheit\n')
+            fahr_value = round((int(option_value) * 1.8) + 32, 2)
+            print(f"\t{option_value} C equals {fahr_value} deg. Fahrenheit\n")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 degrees()
-            else: 
+            else:
                 welcome()
 
     else:
@@ -54,36 +53,36 @@ def meters():
     """
     This function will convert meters to feet and vice versa.
     """
-    print('You have choosen the meters option')
-    print('What do you wish to convert? 1.Feet or 2.Meters?')
-    option = input('enter you option(1 or 2): ')
-    if option == '1':
-        print('\nFeet it is...')
-        option_value = input('How many feet: ')
+    print("You have choosen the meters option")
+    print("What do you wish to convert? 1.Feet or 2.Meters?")
+    option = input("enter you option(1 or 2): ")
+    if option == "1":
+        print("\nFeet it is...")
+        option_value = input("How many feet: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             meters()
         else:
             meter_value = round(float(option_value) / 3.2808399, 2)
-            print(f'\t{option_value} feet equals {meter_value} meters')
+            print(f"\t{option_value} feet equals {meter_value} meters")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 meters()
             else:
                 welcome()
-    elif option == '2':
-        print('\nmeters it is...')
-        option_value = input('How many meters: ')
+    elif option == "2":
+        print("\nmeters it is...")
+        option_value = input("How many meters: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             meters()
         else:
             feet_value = round(float(option_value) * 3.2808399, 2)
-            print(f'\t{option_value} meter(s) equals {feet_value} feet')
+            print(f"\t{option_value} meter(s) equals {feet_value} feet")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 meters()
             else:
                 welcome()
@@ -96,36 +95,36 @@ def kilos():
     """
     This function will convert kilos to pounds and vice versa.
     """
-    print('You have choosen the kilos option')
-    print('What do you wish to convert? 1.Kilos or 2.Pounds?')
-    option = input('enter you option(1 or 2): ')
-    if option == '1':
-        print('\nKilos it is...')
-        option_value = input('How many kilos: ')
+    print("You have choosen the kilos option")
+    print("What do you wish to convert? 1.Kilos or 2.Pounds?")
+    option = input("enter you option(1 or 2): ")
+    if option == "1":
+        print("\nKilos it is...")
+        option_value = input("How many kilos: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             kilos()
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
-            print(f'\t{option_value} kilo(s) equals {pounds_value} pound(s)')
+            print(f"\t{option_value} kilo(s) equals {pounds_value} pound(s)")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 kilos()
             else:
                 welcome()
-    elif option == '2':
-        print('\nPounds it is...')
-        option_value = input('How many pounds: ')
+    elif option == "2":
+        print("\nPounds it is...")
+        option_value = input("How many pounds: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             kilos()
         else:
             kilos_value = round(float(option_value) / 2.20462262, 2)
-            print(f'\t{option_value} pound(s) equals {kilos_value} kilo(s)')
+            print(f"\t{option_value} pound(s) equals {kilos_value} kilo(s)")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 kilos()
             else:
                 welcome()
@@ -139,39 +138,39 @@ def liters():
     """
     This function will convert liters to gallons and vice versa.
     """
-    print('You have choosen the liters option')
-    print('What do you wish to convert? 1.Liters or 2.Gallons?')
-    option = input('enter you option(1 or 2): ')
-    if option == '1':
-        print('\nLiters it is...')
-        option_value = input('How many liters: ')
+    print("You have choosen the liters option")
+    print("What do you wish to convert? 1.Liters or 2.Gallons?")
+    option = input("enter you option(1 or 2): ")
+    if option == "1":
+        print("\nLiters it is...")
+        option_value = input("How many liters: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             liters()
         else:
             gallons_value = round(int(option_value) / 3.78541178, 2)
-            print(f'\t{option_value} liter(s) equals {gallons_value} gallon(s)')
+            print(f"\t{option_value} liters equals {gallons_value} gallons")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 degrees()
             else:
-                welcome()     
-    elif option == '2':
-        print('\nGallons it is...')
-        option_value = input('How many gallons: ')
+                welcome()
+    elif option == "2":
+        print("\nGallons it is...")
+        option_value = input("How many gallons: ")
         if not option_value.isdigit():
-            print('invalid input, try again')
+            print("invalid input, try again")
             liters()
         else:
             liters_value = round(int(option_value) * 3.78541178, 2)
-            print(f'\t{option_value} gallon(s) equals {liters_value} liter(s)')
+            print(f"\t{option_value} gallon(s) equals {liters_value} liter(s)")
             retry_message()
             retry_answer = input()
-            if retry_answer == 'y':
+            if retry_answer == "y":
                 degrees()
             else:
-                welcome()     
+                welcome()
     else:
         validate_opt(option)
         degrees()
@@ -194,16 +193,16 @@ def welcome():
     while True:
         choice = input()
         if validate(choice):
-            if choice == '1':
+            if choice == "1":
                 degrees()
-            elif choice == '2':
+            elif choice == "2":
                 meters()
-            elif choice == '3':
+            elif choice == "3":
                 kilos()
-            elif choice == '4':
+            elif choice == "4":
                 liters()
-            elif choice == '5':
-                print('Thank you for testing the program!')
+            elif choice == "5":
+                print("Thank you for testing the program!")
                 return
         else:
             welcome()
@@ -216,8 +215,7 @@ def validate(values):
     1,2,3,4,5.
     """
     try:
-        (values)
-        if values not in ('1', '2', '3', '4', '5'):
+        if values not in ("1", "2", "3", "4", "5"):
             raise ValueError(f"1,2,3,4 are valid values, you typed {values}")
     except ValueError as e:
         print(f"Invalid input: {e}, try again.\n")
@@ -226,6 +224,9 @@ def validate(values):
 
 
 def validate_opt(values):
+    """
+    Raises an error if values not 1 or 2.
+    """
     try:
         if values not in ("1", "2"):
             raise ValueError(f"1,2 are valid values, you typed {values}")
@@ -234,9 +235,12 @@ def validate_opt(values):
         return False
     return True
 
+
 def main():
+    """
+    main function starts the program
+    """
     welcome()
-    
 
 
 main()
