@@ -92,7 +92,15 @@ def meters():
         meters()
 
 
-    
+def kilos():
+    """
+    This function will convert kilos to pounds and vice versa.
+    """
+    print('You have choosen the kilos option')
+    print('What do you wish to convert? 1.Kilos or 2.Pounds?')
+    option = input('enter you option: ')
+    print(option)
+
 
 
 def welcome():
@@ -116,7 +124,7 @@ def welcome():
             elif choice == '2':
                 meters()
             elif choice == '3':
-                print('3 = kilogram/pound\n')
+                kilos()
             elif choice == '4':
                 print('4 = liters/us gallons\n')
         else:
