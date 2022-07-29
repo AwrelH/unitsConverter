@@ -6,8 +6,14 @@ def retry_message():
     """
     Prints a retry message.
     """
-    print("\nWish to test out some other values? Yes or No")
+    print("\nWish to test out some other values?")
     print("y/n?")
+
+
+def answers(answer):
+    print('###############################################')
+    print(f"{Fore.YELLOW} {answer}")
+    print('###############################################')
 
 
 def degrees():
@@ -25,7 +31,8 @@ def degrees():
             degrees()
         else:
             cel_value = round((int(option_value) - 32) * 5 / 9, 2)
-            print(f"\t{option_value} F equals {cel_value} deg. Celcius")
+            answer = f"\t{option_value} F equals {cel_value} deg. Celcius"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -40,7 +47,8 @@ def degrees():
             degrees()
         else:
             fahr_value = round((int(option_value) * 1.8) + 32, 2)
-            print(f"\t{option_value} C equals {fahr_value} deg. Fahrenheit\n")
+            answer = f"\t{option_value} C equals {fahr_value} deg. Fahrenheit"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -192,7 +200,7 @@ def welcome():
         3 = kilogram/pound\n
         4 = liters/us gallons\n
         5 = exit the program
-        make your choice my entering one of the above(1-4) options.
+        make your choice my entering one of the above(1-5) options.
         """
     print(f'{Fore.BLUE} + {message}')
     while True:
