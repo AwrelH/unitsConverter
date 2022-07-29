@@ -15,8 +15,8 @@ def degrees():
     print('What do you wish to convert? 1.Fahrenheit or 2.Celcius?')
     option = input('enter you option(1 or 2): ')
     if option == '1':
-        print('Fahrenheit it is...')
-        option_value = input('\nWrite down a temperature: ')
+        print('\nFahrenheit it is...')
+        option_value = input('Write down a temperature: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             degrees()
@@ -30,8 +30,8 @@ def degrees():
             else:
                 welcome()
     elif option == '2':
-        print('Celcius it is...')
-        option_value = input('\nWrite down a temperature: ')
+        print('\nCelcius it is...')
+        option_value = input('Write down a temperature: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             degrees()
@@ -58,8 +58,8 @@ def meters():
     print('What do you wish to convert? 1.Feet or 2.Meters?')
     option = input('enter you option(1 or 2): ')
     if option == '1':
-        print('Feet it is...')
-        option_value = input('\nHow many feet: ')
+        print('\nFeet it is...')
+        option_value = input('How many feet: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             meters()
@@ -73,8 +73,8 @@ def meters():
             else:
                 welcome()
     elif option == '2':
-        print('meters it is...')
-        option_value = input('\nHow many meters: ')
+        print('\nmeters it is...')
+        option_value = input('How many meters: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             meters()
@@ -100,8 +100,8 @@ def kilos():
     print('What do you wish to convert? 1.Kilos or 2.Pounds?')
     option = input('enter you option(1 or 2): ')
     if option == '1':
-        print('Kilos it is...')
-        option_value = input('\nHow many kilos: ')
+        print('\nKilos it is...')
+        option_value = input('How many kilos: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             kilos()
@@ -115,8 +115,8 @@ def kilos():
             else:
                 welcome()
     elif option == '2':
-        print('Pounds it is...')
-        option_value = input('\nHow many pounds: ')
+        print('\nPounds it is...')
+        option_value = input('How many pounds: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             kilos()
@@ -143,8 +143,8 @@ def liters():
     print('What do you wish to convert? 1.Liters or 2.Gallons?')
     option = input('enter you option(1 or 2): ')
     if option == '1':
-        print('Liters it is...')
-        option_value = input('\nHow many liters: ')
+        print('\nLiters it is...')
+        option_value = input('How many liters: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             liters()
@@ -158,8 +158,8 @@ def liters():
             else:
                 welcome()     
     elif option == '2':
-        print('Gallons it is...')
-        option_value = input('\nHow many gallons: ')
+        print('\nGallons it is...')
+        option_value = input('How many gallons: ')
         if not option_value.isdigit():
             print('invalid input, try again')
             liters()
@@ -177,18 +177,17 @@ def liters():
         degrees()
 
 
-
 def welcome():
     """
     Print welcome message
     """
-    message = """welcome to the unit converter!\n
+    message = """\nwelcome to the unit converter!\n
         Units you can convert:\n
         1 = celcius/fahrenheit\n
         2 = meters/feet\n
         3 = kilogram/pound\n
         4 = liters/us gallons\n
-        5 = for exit the program
+        5 = exit the program
         make your choice my entering one of the above(1-4) options.
         """
     print(message)
@@ -235,8 +234,9 @@ def validate_opt(values):
         return False
     return True
 
-        
+def main():
+    welcome()
+    
 
 
-welcome()
-
+main()
