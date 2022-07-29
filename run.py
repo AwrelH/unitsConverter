@@ -5,19 +5,31 @@ colorama.init(autoreset=True)
 
 def retry_message():
     """
-    Prints a retry message.
+    Prints a retry message and askes if user wants to try
+    new values. y for new values else goes back to main
     """
     print("\nWish to test out some other values?")
     print("y/n?")
+    retry_answer = input()
+    if retry_answer == "y":
+        degrees()
+    else:
+        main()
 
 
-def answers(answer):  # output answer to calculations
+def answers(answer):
+    """
+    Prints out answer to calcuations
+    """
     print('###############################################')
     print(f"{Fore.YELLOW} {answer}")
     print('###############################################')
 
 
 def error_message():
+    """
+    Prints out message about wrong input.
+    """
     print(f'{Fore.RED}invalid input, try again')
 
 
@@ -38,12 +50,7 @@ def degrees():
             cel_value = round((int(option_value) - 32) * 5 / 9, 2)
             answer = f"\t{option_value} F equals {cel_value} deg. Celcius"
             answers(answer)
-            retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                degrees()
-            else:
-                welcome()
+            retry_message()         
     elif option == "2":
         print("\nCelcius it is...")
         option_value = input("Write down a temperature: ")
@@ -55,12 +62,6 @@ def degrees():
             answer = f"\t{option_value} C equals {fahr_value} deg. Fahrenheit"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                degrees()
-            else:
-                welcome()
-
     else:
         validate_opt(option)
         degrees()
@@ -84,11 +85,6 @@ def meters():
             answer = f"\t{option_value} feet equals {meter_value} meters"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                meters()
-            else:
-                welcome()
     elif option == "2":
         print("\nmeters it is...")
         option_value = input("How many meters: ")
@@ -100,11 +96,6 @@ def meters():
             answer = f"\t{option_value} meter(s) equals {feet_value} feet"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                meters()
-            else:
-                welcome()
     else:
         validate_opt(option)
         meters()
@@ -128,11 +119,6 @@ def kilos():
             answer = f"\t{option_value} kilo(s) equals {pounds_value} pound(s)"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                kilos()
-            else:
-                welcome()
     elif option == "2":
         print("\nPounds it is...")
         option_value = input("How many pounds: ")
@@ -144,12 +130,6 @@ def kilos():
             answer = f"\t{option_value} pound(s) equals {kilos_value} kilo(s)"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                kilos()
-            else:
-                welcome()
-
     else:
         validate_opt(option)
         kilos()
@@ -173,11 +153,6 @@ def liters():
             answer = f"\t{option_value} liters equals {gallons_value} gallons"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                degrees()
-            else:
-                welcome()
     elif option == "2":
         print("\nGallons it is...")
         option_value = input("How many gallons: ")
@@ -189,11 +164,6 @@ def liters():
             answer = f"\t{option_value} gallons equals {liters_value} liters"
             answers(answer)
             retry_message()
-            retry_answer = input()
-            if retry_answer == "y":
-                degrees()
-            else:
-                welcome()
     else:
         validate_opt(option)
         degrees()
@@ -229,7 +199,7 @@ def welcome():
                 print("Thank you for testing the program!")
                 return
         else:
-            welcome()
+            main()
         return True
 
 
