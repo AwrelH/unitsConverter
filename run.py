@@ -1,6 +1,13 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+
+def retry_message():
+    print('\nWish to test out some other values?')
+    print('(Y)es or (N)o?')   
+
+
+
 def degrees():
     """
     Function to convert celcius to fahrenheit and vice versa.
