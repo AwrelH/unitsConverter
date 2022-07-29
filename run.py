@@ -22,7 +22,7 @@ def degrees():
             degrees()
         else:
             cel_value = round((int(option_value)-32) * 5 / 9, 2)
-            print(f'{option_value} F equals {cel_value} degrees Celcius')
+            print(f'\t{option_value} F equals {cel_value} degrees Celcius')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -37,7 +37,7 @@ def degrees():
             degrees()
         else:
             fahr_value = round((int(option_value)*1.8) + 32, 2)
-            print(f'{option_value} C equals {fahr_value} degrees Fahrenheit\n')
+            print(f'\t{option_value} C equals {fahr_value} degrees Fahrenheit\n')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -65,7 +65,7 @@ def meters():
             meters()
         else:
             meter_value = round(float(option_value) / 3.2808399, 2)
-            print(f'{option_value} feet equals {meter_value} meters')
+            print(f'\t{option_value} feet equals {meter_value} meters')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -80,7 +80,7 @@ def meters():
             meters()
         else:
             feet_value = round(float(option_value) * 3.2808399, 2)
-            print(f'{option_value} meter(s) equals {feet_value} feet')
+            print(f'\t{option_value} meter(s) equals {feet_value} feet')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -107,12 +107,19 @@ def kilos():
             kilos()
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
-            print(f'{option_value} kilo(s) equals {pounds_value} pound(s)')
+            print(f'\t{option_value} kilo(s) equals {pounds_value} pound(s)')
 
 
     elif option == '2':
         print('Pounds it is...')
-        input('\nHow many pounds: ')
+        option_value = input('\nHow many pounds: ')
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            kilos()
+        else:
+            kilos_value = round(float(option_value) / 2.20462262, 2)
+            print(f'\t{option_value} pound(s) equals {kilos_value} kilo(s)')
+
     else:
         validate_opt(option)
         kilos()
@@ -130,6 +137,7 @@ def welcome():
         2 = meters/feet\n
         3 = kilogram/pound\n
         4 = liters/us gallons\n
+        5 = for exit the program
         make your choice my entering one of the above(1-4) options.
         """
     print(message)
@@ -144,6 +152,9 @@ def welcome():
                 kilos()
             elif choice == '4':
                 print('4 = liters/us gallons\n')
+            elif choice == '5':
+                print('Thank you for testing the program!')
+                return
         else:
             welcome()
         return True
@@ -152,11 +163,11 @@ def welcome():
 def validate(values):
     """
     Inside try, raise error, if input not equal to,
-    1,2,3,4.
+    1,2,3,4,5.
     """
     try:
-        int(values)
-        if values not in ('1', '2', '3', '4'):
+        (values)
+        if values not in ('1', '2', '3', '4', '5'):
             raise ValueError(f"1,2,3,4 are valid values, you typed {values}")
     except ValueError as e:
         print(f"Invalid input: {e}, try again.\n")
