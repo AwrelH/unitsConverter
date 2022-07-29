@@ -5,7 +5,10 @@ def degrees():
     """
     Function to convert celcius to fahrenheit and vice versa.
     """
-    print('the degree function')
+    print('You have choosen the degrees option')
+    print('What do you wish to convert? 1.Fahrenheit or 2.Celcius?')
+    input('enter you option(1 or 2): ')
+    
 
 
 def welcome():
