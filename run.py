@@ -10,8 +10,19 @@ def degrees():
     option = input('enter you option(1 or 2): ')
     if option == '1':
         print('Fahrenheit it is...')
+        option_value = input('\nWrite down a temperature: ')
+        if not option_value.isdigit():
+            print(f'invalid input, try again')
+            degrees()
+        else:
+            cel_value = round((int(option_value)-32) * 5 / 9, 2)
+            print(f'{option_value} F equals {cel_value} degrees Celcius')
+
+
     elif option == '2':
         print('Celcius it is...')
+        option_value = input('\nWrite down a temperature: ')
+
     else:
         validate_opt(option)
         degrees()
