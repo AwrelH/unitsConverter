@@ -56,6 +56,42 @@ def meters():
     """
     print('You have choosen the meters option')
     print('What do you wish to convert? 1.Feet or 2.Meters?')
+    option = input('enter you option(1 or 2): ')
+    if option == '1':
+        print('Feet it is...')
+        option_value = input('\nHow many feet: ')
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            meters()
+        else:
+            meter_value = round(float(option_value) / 3.2808399, 2)
+            print(f'{option_value} feet equals {meter_value} meters')
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                meters()
+            else:
+                welcome()
+    elif option == '2':
+        print('meters it is...')
+        option_value = input('\nHow many meters: ')
+        if not option_value.isdigit():
+            print('invalid input, try again')
+            meters()
+        else:
+            feet_value = round(float(option_value) * 3.2808399, 2)
+            print(f'{option_value} meter(s) equals {feet_value} feet')
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                meters()
+            else:
+                welcome()
+    else:
+        validate_opt(option)
+        meters()
+
+
     
 
 
@@ -78,7 +114,7 @@ def welcome():
             if choice == '1':
                 degrees()
             elif choice == '2':
-                print('2 = meters/feet\n')
+                meters()
             elif choice == '3':
                 print('3 = kilogram/pound\n')
             elif choice == '4':
