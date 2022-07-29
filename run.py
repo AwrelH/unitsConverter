@@ -10,10 +10,14 @@ def retry_message():
     print("y/n?")
 
 
-def answers(answer):
+def answers(answer): # output answer to calculations
     print('###############################################')
     print(f"{Fore.YELLOW} {answer}")
     print('###############################################')
+
+
+def error_message():
+    print(f'{Fore.RED}invalid input, try again')
 
 
 def degrees():
@@ -27,7 +31,7 @@ def degrees():
         print("\nFahrenheit it is...")
         option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             degrees()
         else:
             cel_value = round((int(option_value) - 32) * 5 / 9, 2)
@@ -43,7 +47,7 @@ def degrees():
         print("\nCelcius it is...")
         option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             degrees()
         else:
             fahr_value = round((int(option_value) * 1.8) + 32, 2)
@@ -72,11 +76,12 @@ def meters():
         print("\nFeet it is...")
         option_value = input("How many feet: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             meters()
         else:
             meter_value = round(float(option_value) / 3.2808399, 2)
-            print(f"\t{option_value} feet equals {meter_value} meters")
+            answer = f"\t{option_value} feet equals {meter_value} meters"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -87,11 +92,12 @@ def meters():
         print("\nmeters it is...")
         option_value = input("How many meters: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             meters()
         else:
             feet_value = round(float(option_value) * 3.2808399, 2)
-            print(f"\t{option_value} meter(s) equals {feet_value} feet")
+            answer = f"\t{option_value} meter(s) equals {feet_value} feet"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -114,11 +120,12 @@ def kilos():
         print("\nKilos it is...")
         option_value = input("How many kilos: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             kilos()
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
-            print(f"\t{option_value} kilo(s) equals {pounds_value} pound(s)")
+            answer = f"\t{option_value} kilo(s) equals {pounds_value} pound(s)"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -129,11 +136,12 @@ def kilos():
         print("\nPounds it is...")
         option_value = input("How many pounds: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             kilos()
         else:
             kilos_value = round(float(option_value) / 2.20462262, 2)
-            print(f"\t{option_value} pound(s) equals {kilos_value} kilo(s)")
+            answer = f"\t{option_value} pound(s) equals {kilos_value} kilo(s)"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -157,11 +165,12 @@ def liters():
         print("\nLiters it is...")
         option_value = input("How many liters: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             liters()
         else:
             gallons_value = round(int(option_value) / 3.78541178, 2)
-            print(f"\t{option_value} liters equals {gallons_value} gallons")
+            answer = f"\t{option_value} liters equals {gallons_value} gallons"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
@@ -172,11 +181,12 @@ def liters():
         print("\nGallons it is...")
         option_value = input("How many gallons: ")
         if not option_value.isdigit():
-            print(f'{Fore.RED}invalid input, try again')
+            error_message()
             liters()
         else:
             liters_value = round(int(option_value) * 3.78541178, 2)
-            print(f"\t{option_value} gallon(s) equals {liters_value} liter(s)")
+            answer = f"\t{option_value} gallon(s) equals {liters_value} liter(s)"
+            answers(answer)
             retry_message()
             retry_answer = input()
             if retry_answer == "y":
