@@ -7,7 +7,7 @@ def degrees():
     """
     print('You have choosen the degrees option')
     print('What do you wish to convert? 1.Fahrenheit or 2.Celcius?')
-    input('enter you option(1 or 2): ')
+    option = input('enter you option(1 or 2): ')
     if option == '1':
         print('Fahrenheit it is...')
     elif option == '2':
