@@ -1,6 +1,7 @@
 import colorama
-from colorama import Fore, Style
+from colorama import Fore
 colorama.init(autoreset=True)
+
 
 def retry_message():
     """
@@ -10,7 +11,7 @@ def retry_message():
     print("y/n?")
 
 
-def answers(answer): # output answer to calculations
+def answers(answer):  # output answer to calculations
     print('###############################################')
     print(f"{Fore.YELLOW} {answer}")
     print('###############################################')
@@ -185,7 +186,7 @@ def liters():
             liters()
         else:
             liters_value = round(int(option_value) * 3.78541178, 2)
-            answer = f"\t{option_value} gallon(s) equals {liters_value} liter(s)"
+            answer = f"\t{option_value} gallons equals {liters_value} liters"
             answers(answer)
             retry_message()
             retry_answer = input()
