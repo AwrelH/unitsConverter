@@ -8,6 +8,14 @@ def degrees():
     print('You have choosen the degrees option')
     print('What do you wish to convert? 1.Fahrenheit or 2.Celcius?')
     input('enter you option(1 or 2): ')
+    if option == '1':
+        print('Fahrenheit it is...')
+    elif option == '2':
+        print('Celcius it is...')
+    else:
+        validate_opt(option)
+        degrees()
+
     
 
 
@@ -53,6 +61,16 @@ def validate(values):
         int(values)
         if values not in ('1', '2', '3', '4'):
             raise ValueError(f"1,2,3,4 are valid values, you typed {values}")
+    except ValueError as e:
+        print(f"Invalid input: {e}, try again.\n")
+        return False
+    return True
+
+
+def validate_opt(values):
+    try:
+        if values not in ("1", "2"):
+            raise ValueError(f"1,2 are valid values, you typed {values}")
     except ValueError as e:
         print(f"Invalid input: {e}, try again.\n")
         return False
