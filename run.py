@@ -99,7 +99,16 @@ def kilos():
     print('You have choosen the kilos option')
     print('What do you wish to convert? 1.Kilos or 2.Pounds?')
     option = input('enter you option: ')
-    print(option)
+    if option == '1':
+        print('Kilos it is...')
+        input('\nHow many kilos: ')
+    elif option == '2':
+        print('Pounds it is...')
+        input('\nHow many pounds: ')
+    else:
+        validate_opt(option)
+        kilos()
+
 
 
 
