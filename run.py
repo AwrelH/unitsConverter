@@ -22,7 +22,7 @@ def degrees():
             degrees()
         else:
             cel_value = round((int(option_value)-32) * 5 / 9, 2)
-            print(f'\t{option_value} F equals {cel_value} degrees Celcius')
+            print(f'\t{option_value} F equals {cel_value} deg. Celcius')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -37,7 +37,7 @@ def degrees():
             degrees()
         else:
             fahr_value = round((int(option_value)*1.8) + 32, 2)
-            print(f'\t{option_value} C equals {fahr_value} degrees Fahrenheit\n')
+            print(f'\t{option_value} C equals {fahr_value} deg. Fahrenheit\n')
             retry_message()
             retry_answer = input()
             if retry_answer == 'y':
@@ -108,8 +108,12 @@ def kilos():
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
             print(f'\t{option_value} kilo(s) equals {pounds_value} pound(s)')
-
-
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                kilos()
+            else:
+                welcome()
     elif option == '2':
         print('Pounds it is...')
         option_value = input('\nHow many pounds: ')
@@ -119,6 +123,12 @@ def kilos():
         else:
             kilos_value = round(float(option_value) / 2.20462262, 2)
             print(f'\t{option_value} pound(s) equals {kilos_value} kilo(s)')
+            retry_message()
+            retry_answer = input()
+            if retry_answer == 'y':
+                kilos()
+            else:
+                welcome()
 
     else:
         validate_opt(option)
