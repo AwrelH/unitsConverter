@@ -1,4 +1,4 @@
-# Import styling ability
+#  Import styling ability
 import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
@@ -53,7 +53,7 @@ def degrees():
             answer = f"\t{option_value} F equals {cel_value} deg. Celcius"
             answers(answer)
             retry_message()
-            degrees()   
+            degrees()
 
     elif option == "2":
         print("\nCelcius it is...")
@@ -194,7 +194,7 @@ def welcome():
         5 = exit the program
         make your choice my entering one of the above(1-5) options.
         """
-    print(f'{Fore.BLUE} + {message}')
+    print(f'{Fore.LIGHTBLUE_EX} {message}')
     while True:
         choice = input()
         if validate(choice):
@@ -211,7 +211,7 @@ def welcome():
                 break
         else:
             main()
-        
+
 
 def validate(values):
     """
