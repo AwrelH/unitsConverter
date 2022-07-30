@@ -1,4 +1,4 @@
-import colorama
+# Import styling ability
 from colorama import Fore
 colorama.init(autoreset=True)
 
