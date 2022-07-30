@@ -1,4 +1,5 @@
 # Import styling ability
+import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
 
@@ -11,10 +12,11 @@ def retry_message():
     print("\nWish to test out some other values?")
     print("y/n?")
     retry_answer = input()
-    if retry_answer == "y":
-        degrees()
-    else:
-        main()
+    while True:
+        if retry_answer == "y":
+            break
+        else:
+            main()
 
 
 def answers(answer):
@@ -50,7 +52,9 @@ def degrees():
             cel_value = round((int(option_value) - 32) * 5 / 9, 2)
             answer = f"\t{option_value} F equals {cel_value} deg. Celcius"
             answers(answer)
-            retry_message()         
+            retry_message()
+            degrees()   
+
     elif option == "2":
         print("\nCelcius it is...")
         option_value = input("Write down a temperature: ")
@@ -62,6 +66,7 @@ def degrees():
             answer = f"\t{option_value} C equals {fahr_value} deg. Fahrenheit"
             answers(answer)
             retry_message()
+            degrees()
     else:
         validate_opt(option)
         degrees()
@@ -85,6 +90,7 @@ def meters():
             answer = f"\t{option_value} feet equals {meter_value} meters"
             answers(answer)
             retry_message()
+            meters()
     elif option == "2":
         print("\nmeters it is...")
         option_value = input("How many meters: ")
@@ -96,6 +102,7 @@ def meters():
             answer = f"\t{option_value} meter(s) equals {feet_value} feet"
             answers(answer)
             retry_message()
+            meters()
     else:
         validate_opt(option)
         meters()
@@ -119,6 +126,7 @@ def kilos():
             answer = f"\t{option_value} kilo(s) equals {pounds_value} pound(s)"
             answers(answer)
             retry_message()
+            kilos()
     elif option == "2":
         print("\nPounds it is...")
         option_value = input("How many pounds: ")
@@ -130,6 +138,7 @@ def kilos():
             answer = f"\t{option_value} pound(s) equals {kilos_value} kilo(s)"
             answers(answer)
             retry_message()
+            kilos()
     else:
         validate_opt(option)
         kilos()
@@ -153,6 +162,7 @@ def liters():
             answer = f"\t{option_value} liters equals {gallons_value} gallons"
             answers(answer)
             retry_message()
+            liters()
     elif option == "2":
         print("\nGallons it is...")
         option_value = input("How many gallons: ")
@@ -164,9 +174,10 @@ def liters():
             answer = f"\t{option_value} gallons equals {liters_value} liters"
             answers(answer)
             retry_message()
+            liters()
     else:
         validate_opt(option)
-        degrees()
+        liters()
 
 
 def welcome():
@@ -197,11 +208,10 @@ def welcome():
                 liters()
             elif choice == "5":
                 print("Thank you for testing the program!")
-                return
+                break
         else:
             main()
-        return True
-
+        
 
 def validate(values):
     """
