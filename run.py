@@ -208,7 +208,9 @@ def welcome():
                 liters()
             elif choice == "5":
                 print("Thank you for testing the program!")
-                break
+                print("please come again!")
+                exit()
+
         else:
             main()
 
