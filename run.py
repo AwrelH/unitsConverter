@@ -191,7 +191,7 @@ def welcome():
         entering one of the (1-5) options.\n
         1 = Celsius/Fahrenheit\n
         2 = Meters/Feet\n
-        3 = Kilos/pounds\n
+        3 = Kilos/Pounds\n
         4 = Liters/Gallons\n
         5 = Exit the program
         """
