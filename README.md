@@ -8,7 +8,7 @@ The units converter is a python terminal program that takes values from the user
 
 # How to use
 
-## In a world of different parameters, languages and ways to measure a converter is a tool that always comes to hand when not knowing the differences by hand. 
+## In a world of different parameters, languages and ways to measure a converter is a tool that always will come to good use when not knowing the differences by heart. 
 
 The program is very straightforward. You will as a user be presented with 5 options. Four of them equals conversion choices. 
 - Celsius / Fahrenheit
@@ -50,7 +50,7 @@ Made with Microsoft Visio.
 ## calculations
 
 Some methods used in the calculations were the following
-- int() - returns an integers number from a number or a string
+- int() - returns an integers number from a string
 - float() - returns a floating number from a number or a string
 - round() - return a floating number with a specific number of decimals, in my program 2 decimals.
 
@@ -100,4 +100,9 @@ Heroku was the platform the project was deployed to.
 1. Choose `Deploy Branch` method, automatic or manual, I choose manual.
 1. Heroku will do its job connecting, and create a link to page.
 1. When message `Your app was successfully deployed` is recieved you can `view` the site.
+
+# Future addons
+There are possibilities to add more units to the program. 
+
+One could also add a random() to generate examples of values within in each function.
 
