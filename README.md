@@ -8,7 +8,7 @@ The units converter is a python terminal program that takes values from the user
 
 # How to use
 
-## In a world of different parameters, languages and ways to measure a converter is a tool that always will come to good use when not knowing the differences by heart. 
+## In a world of different parameters, languages and ways to measure a converter is a tool that will always come to good use when not knowing the differences by heart. 
 
 The program is very straightforward. You will as a user be presented with 5 options. Four of them equals conversion choices. 
 - Celsius / Fahrenheit
@@ -22,7 +22,7 @@ The program is very straightforward. You will as a user be presented with 5 opti
 
 ![menu](/assets/forReadme/menuscreen.PNG)
 
-- Choose a number between 1-5, if not correct input you will get an error message in the colour red and retry new input.
+- Choose a number between 1-5, if not correct input you will get an error message in the color red and retry new input.
 
 ![validatemessage](assets/forReadme/validateMessage.PNG)
 
@@ -40,30 +40,34 @@ The program is very straightforward. You will as a user be presented with 5 opti
 
 If the answer is yes, you go back to program and choose what parameter you want to have converted. Else you will be sent to the main option menu.
 
-## the plot layout
+## The plot layout
 
 
 ![plot layout](assets/forReadme/plotlayout.png)
 Made with Microsoft Visio.
 
 
-## calculations
+## Calculations
 
 Some methods used in the calculations were the following
 - int() - returns an integers number from a string
 - float() - returns a floating number from a number or a string
 - round() - return a floating number with a specific number of decimals, in my program 2 decimals.
 
-arithmetic operator used
+Arithmetic operator used
 - Division /
 - Multiplication \*
 - Subtraction -
 - Addition +
 
+## Colorama
+
+To make program more user-friendly I imported colorama. The menu is in blue, wrong answers in red and the correct answer is yellow. 
+
 
 
 # Testing
-I have tested the program for each of the steps and tried to commit as often as I could. This has helped to avoid bugs. 
+I have tested the program for each of the steps and tried to commit as often as I could. This has helped to minimize the amount of bugs and make sure the code is working properly. 
 
 ## Bugs
 Some of the bugs that I have come across wasn't too hard to handle. Foremost it was string input that couldn't be handled since they weren't integers or floats. That was easily handled by using the int() or float()-function in the equations.
@@ -84,7 +88,7 @@ I validated my code via the pep8 online check, (http://pep8online.com/) without 
 
 ### GitHub Pages
 
-The project was created on github, by first forking the Code Institute template and since it's a python project, github does not manage to have it deployed in its pages. 
+The project was created on Github, by first forking the Code Institute template and since it's a python project, Github does not manage to have it deployed in its pages. 
 
 ### Heroku 
 
@@ -93,15 +97,15 @@ Heroku was the platform the project was deployed to.
 1. On the dashboard select `New` and `Create new app` which takes you to right place.
 1. Name the app, select `region`, click `Create new app`.
 1. Go to `settings`.
-1. Config Vars >> reveal vars >> add key:PORT, value: 8000 and click add
-1. add `buildingpacks` - add nodejs and python
+1. Config Vars >> reveal vars >> add key:PORT, value: 8000 and click Add
+1. Add `buildingpacks` - add nodejs and python
 1. go to `Deploy` and choose method, `github` in this case, connect to it.
 1. Search and select/connect to your repository
 1. Choose `Deploy Branch` method, automatic or manual, I choose manual.
 1. Heroku will do its job connecting, and create a link to page.
-1. When message `Your app was successfully deployed` is recieved you can `view` the site.
+1. When message `Your app was successfully deployed` is received you can `view` the site.
 
-# Future addons
+# Future add-ons
 There are possibilities to add more units to the program. 
 
 One could also add a random() to generate examples of values within in each function.
