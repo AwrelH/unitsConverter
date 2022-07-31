@@ -16,6 +16,34 @@ The program is very straightforward. You will as a user be presented with 5 opti
 
 # walkthrough of the program
 
+- You are welcomed with a short message and an option menu.
+
+![menu](/assets/forReadme/menuscreen.PNG)
+
+- Choose a number between 1-5, if not correct input you will get an error message in the colour red and retry new input.
+
+![validatemessage](assets/forReadme/validateMessage.PNG)
+
+- After correct choice you will go to that part of the program. 
+
+![degrees function](assets/forReadme/firstChoice.PNG)
+
+- If you correct input is typed, you go to next phase and add value that will be calculated, else you will get a message about invalid input in red.
+
+![invalid input 2](assets/forReadme/invalidinput.PNG)
+
+- When correct value is typed, 1 or 2, you can type a value and then get an answer message with an option to try new values. 
+
+![correct input](assets/forReadme/correctInput.PNG)
+
+If the answer is yes, you go back to program and choose what parameter you want to have converted. Else you will be sent to the main option menu.
+
+## the plot layout
+
+
+![plot layout](assets/forReadme/plotlayout.png)
+Made with Microsoft Visio.
+
 # Testing
 I have tested the program for each of the steps and tried to commit as often as I could. This has helped to avoid bugs. 
 
@@ -26,7 +54,7 @@ When adding colorama to the project I forgot to add it to the requirements.txt, 
  in Heroku terminal. 
 
 
-One of the last bugs that I found was that after I ran a program e.g degrees(), and came back to main-menu and choose the exit-option was that I didn't exit the program. Instead, I was stuck in a loop, with the menu. I then tried to do a separate function just to exit while not being in the while-loop of the choices. Didn't really help, removed some while-loop, but still the same result. After a while I went for the built-in function exit() that did the trick. I would count this as a bug that was not solved.  
+One of the last bugs that I found was that after I ran a program e.g. degrees(), and came back to main-menu and choose the exit-option was that I didn't exit the program. Instead, I was stuck in a loop, with the menu. I then tried to do a separate function just to exit while not being in the while-loop of the choices. Didn't help, removed some while-loop, but still the same result. After some trial and errors, I went for the built-in function exit() that did the trick. I would count this as a bug that was not solved.  
 
 
 
@@ -54,9 +82,4 @@ Heroku was the platform the project was deployed to.
 1. Choose `Deploy Branch` method, automatic or manual, I choose manual.
 1. Heroku will do its job connecting, and create a link to page.
 1. When message `Your app was successfully deployed` is recieved you can `view` the site.
-
-
-
-# Credit
-
 
