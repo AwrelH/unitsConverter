@@ -185,14 +185,19 @@ def welcome():
     Print welcome message
     """
     message = """\n
-        welcome to the unit converter!\n
-        Units you can convert:\n
+        ################################
+        Welcome to the unit converter!
+        ################################\n
+        These are the conversions that are
+        available. Make your choice my
+        entering one of the (1-5) options.\n
+        
         1 = Celsius/Fahrenheit\n
         2 = Meters/Feet\n
         3 = Kilos/pounds\n
         4 = Liters/Gallons\n
         5 = Exit the program
-        make your choice my entering one of the above(1-5) options.
+        
         """
     print(f'{Fore.LIGHTBLUE_EX} {message}')
     while True:
@@ -210,7 +215,6 @@ def welcome():
                 print("Thank you for testing the program!")
                 print("please come again!")
                 exit()  # exiting the program
-
         else:
             main()
 
