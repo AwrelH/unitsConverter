@@ -40,7 +40,7 @@ def degrees():
     Function to convert celcius to fahrenheit and vice versa.
     """
     print("You have choosen the degrees option")
-    print("What do you wish to convert? 1.Fahrenheit or 2.Celcius?")
+    print("What do you wish to convert? 1.Fahrenheit or 2.Celsius?")
     option = input("enter you option(1 or 2): ")
     if option == "1":
         print("\nFahrenheit it is...")
@@ -56,7 +56,7 @@ def degrees():
             degrees()
 
     elif option == "2":
-        print("\nCelcius it is...")
+        print("\nCelsius it is...")
         option_value = input("Write down a temperature: ")
         if not option_value.isdigit():
             error_message()
@@ -187,11 +187,11 @@ def welcome():
     message = """\n
         welcome to the unit converter!\n
         Units you can convert:\n
-        1 = celcius/fahrenheit\n
-        2 = meters/feet\n
-        3 = kilogram/pound\n
-        4 = liters/us gallons\n
-        5 = exit the program
+        1 = Celsius/Fahrenheit\n
+        2 = Meters/Feet\n
+        3 = Kilos/pounds\n
+        4 = Liters/Gallons\n
+        5 = Exit the program
         make your choice my entering one of the above(1-5) options.
         """
     print(f'{Fore.LIGHTBLUE_EX} {message}')
@@ -209,7 +209,7 @@ def welcome():
             elif choice == "5":
                 print("Thank you for testing the program!")
                 print("please come again!")
-                exit()
+                exit()  # exiting the program
 
         else:
             main()
