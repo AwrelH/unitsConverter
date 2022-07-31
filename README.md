@@ -8,6 +8,8 @@ The units converter is a python terminal program that takes values from the user
 
 # How to use
 
+## In a world of different parameters, languages and ways to measure a converter is a tool that always comes to hand when not knowing the differences by hand. 
+
 The program is very straightforward. You will as a user be presented with 5 options. Four of them equals conversion choices. 
 - Celsius / Fahrenheit
 - Meters / feet
@@ -43,6 +45,22 @@ If the answer is yes, you go back to program and choose what parameter you want 
 
 ![plot layout](assets/forReadme/plotlayout.png)
 Made with Microsoft Visio.
+
+
+## calculations
+
+Some methods used in the calculations were the following
+- int() - returns an integers number from a number or a string
+- float() - returns a floating number from a number or a string
+- round() - return a floating number with a specific number of decimals, in my program 2 decimals.
+
+arithmetic operator used
+- Division /
+- Multiplication \*
+- Subtraction -
+- Addition +
+
+
 
 # Testing
 I have tested the program for each of the steps and tried to commit as often as I could. This has helped to avoid bugs. 
