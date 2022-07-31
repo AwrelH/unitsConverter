@@ -106,3 +106,5 @@ There are possibilities to add more units to the program.
 
 One could also add a random() to generate examples of values within in each function.
 
+Append made calculations to a Google spreadsheet.
+
