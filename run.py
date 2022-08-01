@@ -123,7 +123,7 @@ def kilos():
             kilos()
         else:
             pounds_value = round(float(option_value) * 2.20462262, 2)
-            answer = f"\t{option_value} kilo(s) equals {pounds_value} pound(s)"
+            answer = f"\t{option_value} kilos equals {pounds_value} pounds"
             answers(answer)
             retry_message()
             kilos()
@@ -135,7 +135,7 @@ def kilos():
             kilos()
         else:
             kilos_value = round(float(option_value) / 2.20462262, 2)
-            answer = f"\t{option_value} pound(s) equals {kilos_value} kilo(s)"
+            answer = f"\t{option_value} pound(s) equals {kilos_value} kilos"
             answers(answer)
             retry_message()
             kilos()
@@ -249,4 +249,5 @@ def main():
     welcome()
 
 
-main()
+if __name__ == '__main__':
+    main()
